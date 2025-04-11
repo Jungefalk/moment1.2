@@ -1,12 +1,68 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Moment1.2</title>
-  </head>
-  <body>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moment1.2</title>
+</head>
+
+<body>
+  <!-- header start -->
+  <header>
+    <h1>Moment 1.2 - DT208G</h1>
+  </header>
+  <!-- header end -->
+
+  <!-- main start -->
+  <main>
+    <h2>Lägg till kurs</h2>
+
+    <!-- form for adding courses -->
+    <form id="addCourseForm">
+      <label for="code">Kurskod:</label>
+      <br>
+      <input type="text" id="code">
+      <br>
+      <label for="name">Kursnamn:</label>
+      <br>
+      <input type="text" id="name">
+      <br>
+      <label for="progression">Progression:</label>
+      <br>
+      <input type="text" id="progression">
+      <br>
+      <label for="syllabus">URL till kursplan</label>
+      <br>
+      <input type="text" id="syllabus">
+      <br>
+      <button type="submit" id="submit">Lägg till</button>
+
+    </form>
+
+    <!-- container which lists added courses -->
+    <div>
+      <h2>Kurslista</h2>
+      <ul id="courseList">
+      </ul>
+    </div>
+
+  </main>
+  <!-- main end -->
+
+  <!-- footer start -->
+  <footer>
+    Kurs: DT208G Datateknik GR (B), Programmering i TypeScript - Mittuniversitetet
+    <br>
+    Laboration: Moment 1.2
+    <br>
+    Av: Caroline Jungafalk Palmgren
+  </footer>
+  <!-- footer end -->
+
+  <!-- script -->
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
 </html>
