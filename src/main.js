@@ -2,7 +2,7 @@
 //Hämta element
 var codeInput = document.getElementById("code");
 var nameInput = document.getElementById("name");
-var progressionInput = document.getElementById("Progression");
+var progressionInput = document.getElementById("progression");
 var syllabysInput = document.getElementById("syllabus");
 var buttonEl = document.getElementById("submit");
 var courseListEl = document.getElementById("courseList");
@@ -12,9 +12,19 @@ addCourseFormEl.addEventListener("submit", addCourse);
 //Funktion som lägger till kurs
 function addCourse(event) {
     event.preventDefault();
-    writeCourse();
+    var newCourse = {
+        code: codeInput.value,
+        name: nameInput.value,
+        progression: progressionInput.value,
+        syllabus: syllabysInput.value
+    };
+    writeCourse(newCourse);
 }
 //Funktion som skriver ut kurs till skärmen
-function writeCourse() {
+function writeCourse(newCourse) {
+    var liEl = document.createElement("li");
+    var liElText = document.createTextNode("".concat(newCourse.code, " ").concat(newCourse.name, " ").concat(newCourse.progression, " ").concat(newCourse.syllabus));
+    liEl.appendChild(liElText);
+    courseListEl.appendChild(liEl);
 }
 ;
