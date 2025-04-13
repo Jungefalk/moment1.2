@@ -15,3 +15,18 @@ let syllabysInput = document.getElementById("syllabus") as HTMLInputElement;
 let buttonEl = document.getElementById("submit") as HTMLButtonElement;
 let courseListEl = document.getElementById("courseList") as HTMLUListElement;
 let addCourseFormEl = document.getElementById("addCourseForm") as HTMLFormElement;
+
+//Händelselyssnare - lyssnar på submit och kallar funktion
+addCourseFormEl.addEventListener("submit", addCourse);
+
+//Funktion som lägger till kurs
+function addCourse(event: Event): void{
+event.preventDefault()
+
+writeCourse();
+}
+
+//Funktion som skriver ut kurs till skärmen
+function writeCourse(): void {
+
+};
