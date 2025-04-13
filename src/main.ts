@@ -1,10 +1,10 @@
 
 //Interface för kurs
-interface Course{
-code: string,
-name: string,
-progression: string,
-syllabus: string,
+interface Course {
+    code: string,
+    name: string,
+    progression: string,
+    syllabus: string,
 };
 
 //Hämta element
@@ -14,3 +14,4 @@ let progressionInput = document.getElementById("Progression") as HTMLInputElemen
 let syllabysInput = document.getElementById("syllabus") as HTMLInputElement;
 let buttonEl = document.getElementById("submit") as HTMLButtonElement;
 let courseListEl = document.getElementById("courseList") as HTMLUListElement;
+let addCourseFormEl = document.getElementById("addCourseForm") as HTMLFormElement;
