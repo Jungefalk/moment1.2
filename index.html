@@ -19,8 +19,10 @@
   <!-- main start -->
   <main>
 
+
     <section>
       <h2>Lägg till kurs</h2>
+
       <!-- form for adding courses -->
       <form id="addCourseForm">
         <label for="code">Kurskod:</label>
@@ -47,12 +49,19 @@
     <!-- container which lists added courses -->
     <section>
       <h2>Kurslista:</h2>
-      <div>
-        <ul id="courseList">
-        </ul>
-      </div>
-    </section>
-
+      <table>
+        <thead>
+        <tr>
+          <th>Kurskod</th>
+          <th>Kursnamn</th>
+          <th>Progression</th>
+          <th>Kursplan</th>
+        </tr>
+      </thead>
+      
+      <tbody id="courseList">
+      </tbody>
+      </table>
   </main>
   <!-- main end -->
 

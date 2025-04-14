@@ -99,10 +99,12 @@ function addCourse(event: Event): void {
 //Funktion som skriver ut kurs till skärmen
 function writeCourse(newCourse: Course): void {
 
-    let liEl = document.createElement("li");
-    let liElText = document.createTextNode(`${newCourse.code} ${newCourse.name} ${newCourse.progression} ${newCourse.syllabus}`);
-    liEl.appendChild(liElText);
-    courseListEl.appendChild(liEl);
+    courseListEl.innerHTML = ` <tr>
+    <td>${newCourse.code}</td>
+    <td>${newCourse.name}</td>
+    <td>${newCourse.progression}</td>
+    <td><a href="${newCourse.syllabus}">${newCourse.syllabus}</a></td>
+    </tr> `
 
 };
 
