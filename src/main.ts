@@ -23,6 +23,15 @@ let progressionErrorEl = document.getElementById("progressionError") as HTMLSpan
 //Händelselyssnare - lyssnar på submit och kallar funktion
 addCourseFormEl.addEventListener("submit", addCourse);
 
+//Funktion som lagrar data in localStorage
+function storeData(): void{
+
+};
+
+//Funktion som laddar in datan från locarStorage
+function loadData(): void{
+
+};
 
 //Funktion som lägger till kurs
 function addCourse(event: Event): void {
@@ -82,6 +91,5 @@ function writeCourse(newCourse: Course): void {
     let liElText = document.createTextNode(`${newCourse.code} ${newCourse.name} ${newCourse.progression} ${newCourse.syllabus}`);
     liEl.appendChild(liElText);
     courseListEl.appendChild(liEl);
-
 
 };
