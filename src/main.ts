@@ -99,7 +99,7 @@ function addCourse(event: Event): void {
 //Funktion som skriver ut kurs till skärmen
 function writeCourse(newCourse: Course): void {
 
-    courseListEl.innerHTML = ` <tr>
+    courseListEl.innerHTML += ` <tr>
     <td>${newCourse.code}</td>
     <td>${newCourse.name}</td>
     <td>${newCourse.progression}</td>
