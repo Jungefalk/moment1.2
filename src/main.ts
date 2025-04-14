@@ -7,6 +7,9 @@ interface Course {
     syllabus: string,
 };
 
+//Tom array som lagrar kurser
+let courses: Course[] = [];
+
 //Hämta element
 let codeInput = document.getElementById("code") as HTMLInputElement;
 let nameInput = document.getElementById("name") as HTMLInputElement;
@@ -41,4 +44,7 @@ function writeCourse(newCourse: Course): void {
     liEl.appendChild(liElText);
     courseListEl.appendChild(liEl);
 
+    //pusha till array
+    courses.push(newCourse);
+    
 };
