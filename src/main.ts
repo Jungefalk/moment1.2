@@ -37,6 +37,7 @@ function addCourse(event: Event): void {
 
     //Töm innerHTML
     codeErrorEl.innerHTML = "";
+    progressionErrorEl.innerHTML = "";
 
     //Kolla att kurskoden inte redan finns
     for (let i = 0; i < courses.length; i++) {
@@ -50,9 +51,25 @@ function addCourse(event: Event): void {
         };
     };
 
+    //Kolla att progression är korrekt
+    if (progressionInput.value != "A" && progressionInput.value != "B" && progressionInput.value != "C") {
+
+        //Felmeddelande i innerHTML
+        progressionErrorEl.innerHTML = "<p> Ange korrekt progression. A, B eller C.</p>"
+
+        //Avbryt funktion
+        return;
+    }
+
     //pusha till array
     courses.push(newCourse);
     console.log(courses);
+
+    //Töm inputfält
+    codeInput.value = "";
+    nameInput.value = "";
+    progressionInput.value = "";
+    syllabysInput.value = "";
 
 
     writeCourse(newCourse);
