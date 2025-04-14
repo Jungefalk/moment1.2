@@ -19,9 +19,19 @@ let courseListEl = document.getElementById("courseList") as HTMLUListElement;
 let addCourseFormEl = document.getElementById("addCourseForm") as HTMLFormElement;
 let codeErrorEl = document.getElementById("codeError") as HTMLSpanElement;
 let progressionErrorEl = document.getElementById("progressionError") as HTMLSpanElement;
+let clearBtnEl = document.getElementById("clearBtn") as HTMLButtonElement;
 
 //Händelselyssnare - lyssnar på submit och kallar funktion
 addCourseFormEl.addEventListener("submit", addCourse);
+clearBtnEl.addEventListener("click", clearStorage);
+
+//Funktion som rensar localStorage och listan
+function clearStorage(): void{
+    localStorage.clear();
+
+    courseListEl.innerHTML = "";
+
+}
 
 //Funktion som lagrar data med localStorage
 function storeData(): void{
