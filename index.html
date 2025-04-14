@@ -18,36 +18,40 @@
 
   <!-- main start -->
   <main>
-    <h2>Lägg till kurs</h2>
 
-    <!-- form for adding courses -->
-    <form id="addCourseForm">
-      <label for="code">Kurskod:</label>
-      <br>
-      <input type="text" id="code" required>
-      <span id="codeError" class="errorMessage"></span>
-      <label for="name">Kursnamn:</label>
-      <br>
-      <input type="text" id="name" required>
-      <br>
-      <label for="progression">Progression:</label>
-      <br>
-      <input type="text" id="progression" required>
-      <span id="progressionError" class="errorMessage"></span>
-      <label for="syllabus">URL till kursplan</label>
-      <br>
-      <input type="url" id="syllabus" required>
-      <br>
-      <button type="submit" id="submit">Lägg till</button>
+    <section>
+      <h2>Lägg till kurs</h2>
+      <!-- form for adding courses -->
+      <form id="addCourseForm">
+        <label for="code">Kurskod:</label>
+        <br>
+        <input type="text" id="code" required>
+        <span id="codeError" class="errorMessage"></span>
+        <label for="name">Kursnamn:</label>
+        <br>
+        <input type="text" id="name" required>
+        <br>
+        <label for="progression">Progression:</label>
+        <br>
+        <input type="text" id="progression" required>
+        <span id="progressionError" class="errorMessage"></span>
+        <label for="syllabus">URL till kursplan</label>
+        <br>
+        <input type="url" id="syllabus" required>
+        <br>
+        <button type="submit" id="submit">Lägg till</button>
 
-    </form>
+      </form>
+    </section>
 
     <!-- container which lists added courses -->
-    <h2>Kurslista:</h2>
-    <div>
-      <ul id="courseList">
-      </ul>
-    </div>
+    <section>
+      <h2>Kurslista:</h2>
+      <div>
+        <ul id="courseList">
+        </ul>
+      </div>
+    </section>
 
   </main>
   <!-- main end -->
