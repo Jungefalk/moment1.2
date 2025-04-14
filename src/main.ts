@@ -21,7 +21,7 @@ let codeErrorEl = document.getElementById("codeError") as HTMLSpanElement;
 let progressionErrorEl = document.getElementById("progressionError") as HTMLSpanElement;
 let clearBtnEl = document.getElementById("clearBtn") as HTMLButtonElement;
 
-//Händelselyssnare - lyssnar på submit och kallar funktion
+//Händelselyssnare
 addCourseFormEl.addEventListener("submit", addCourse);
 clearBtnEl.addEventListener("click", clearStorage);
 
@@ -118,4 +118,5 @@ function writeCourse(newCourse: Course): void {
 
 };
 
+//Hämta sparad data
 loadData();
