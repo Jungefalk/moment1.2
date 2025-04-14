@@ -1,10 +1,11 @@
 ;
+//Tom array som lagrar kurser
+var courses = [];
 //Hämta element
 var codeInput = document.getElementById("code");
 var nameInput = document.getElementById("name");
 var progressionInput = document.getElementById("progression");
 var syllabysInput = document.getElementById("syllabus");
-var buttonEl = document.getElementById("submit");
 var courseListEl = document.getElementById("courseList");
 var addCourseFormEl = document.getElementById("addCourseForm");
 //Händelselyssnare - lyssnar på submit och kallar funktion
@@ -18,6 +19,8 @@ function addCourse(event) {
         progression: progressionInput.value,
         syllabus: syllabysInput.value
     };
+    //pusha till array
+    courses.push(newCourse);
     writeCourse(newCourse);
 }
 //Funktion som skriver ut kurs till skärmen

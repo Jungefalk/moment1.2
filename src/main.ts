@@ -32,6 +32,11 @@ let newCourse: Course = {
     progression: progressionInput.value,
     syllabus: syllabysInput.value
 };
+        
+    //pusha till array
+    courses.push(newCourse);
+    console.log(courses);
+
 
 writeCourse(newCourse);
 }
@@ -44,7 +49,5 @@ function writeCourse(newCourse: Course): void {
     liEl.appendChild(liElText);
     courseListEl.appendChild(liEl);
 
-    //pusha till array
-    courses.push(newCourse);
-    
+
 };
